@@ -9,7 +9,19 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 public class LoadChampion {
-    public static void loadChampionFull_zh_CN() {
+
+    public static ChampionAll loadChampionFull_en_Us() {
+        File championFullFile = new File(PathConstants.VERSION_DATA_en_US_CHAMPION_FULL);
+        String json = null;
+        try {
+            json = FileUtils.readFileToString(championFullFile, StandardCharsets.UTF_8);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return JSON.parseObject(json, ChampionAll.class);
+    }
+
+    public static ChampionAll loadChampionFull_zh_CN() {
         File championFullFile = new File(PathConstants.VERSION_DATA_zh_CN_CHAMPION_FULL);
         String json = null;
         try {
@@ -17,14 +29,18 @@ public class LoadChampion {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        ChampionAll championAll = JSON.parseObject(json, ChampionAll.class);
-        System.out.println(championAll);
-
+        return JSON.parseObject(json, ChampionAll.class);
     }
 
-    public static void main(String[] args) {
-        loadChampionFull_zh_CN();
-
+    public static ChampionAll loadChampionFull_zh_TW() {
+        File championFullFile = new File(PathConstants.VERSION_DATA_zh_TW_CHAMPION_FULL);
+        String json = null;
+        try {
+            json = FileUtils.readFileToString(championFullFile, StandardCharsets.UTF_8);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return JSON.parseObject(json, ChampionAll.class);
     }
 
 }
