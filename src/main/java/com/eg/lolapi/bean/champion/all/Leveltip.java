@@ -3,6 +3,8 @@
  */
 package com.eg.lolapi.bean.champion.all;
 
+import lombok.Data;
+
 import java.util.List;
 
 /**
@@ -11,25 +13,10 @@ import java.util.List;
  * @author bejson.com (i@bejson.com)
  * @website http://www.bejson.com/java2pojo/
  */
+@Data
 public class Leveltip {
 
     private List<String> effect;
     private List<String> label;
-
-    public List<String> getEffect() {
-        return effect;
-    }
-
-    public void setEffect(List<String> effect) {
-        this.effect = effect;
-    }
-
-    public List<String> getLabel() {
-        return label;
-    }
-
-    public void setLabel(List<String> label) {
-        this.label = label;
-    }
 
 }

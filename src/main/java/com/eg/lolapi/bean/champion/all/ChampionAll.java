@@ -13,8 +13,9 @@ import java.util.Map;
  */
 @lombok.Data
 public class ChampionAll {
-    private String format;
     private Map<String, ChampionMapItem> data;
+    private String format;
+    private Map<String, String> keys;
     private String type;
     private String version;
 
