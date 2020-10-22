@@ -5,6 +5,17 @@
     <title>championEnglishAndChinese</title>
 </head>
 <body>
-<span th:text="${hello}"></span>
+<table border="1" cellpadding="0" cellspacing="0" th:each="cbl:${championBeanList}">
+    <tr>
+        <td>
+            <span th:text="${cbl.spellName_en_US}"></span>
+            <span th:text="${cbl.spellName_zh_CN}"></span>
+        </td>
+    </tr>
+    <tr>
+        <td th:text="${cbl.description_en_US}"></td>
+        <td th:text="${cbl.description_zh_CN}"></td>
+    </tr>
+</table>
 </body>
 </html>

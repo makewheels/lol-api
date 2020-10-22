@@ -29,7 +29,7 @@ public class Run {
                 Spells spells_en_US = spellsList_en_US.get(i);
                 Spells spells_zh_CN = spellsList_zh_CN.get(i);
 
-                System.out.println(spells_en_US.getId() + " " + spells_zh_CN.getName());
+                System.out.println(spells_en_US.getName() + " " + spells_zh_CN.getName());
                 System.out.println(spells_en_US.getDescription());
                 System.out.println(spells_zh_CN.getDescription());
                 System.out.println();
