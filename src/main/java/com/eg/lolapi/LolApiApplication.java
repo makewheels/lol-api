@@ -8,6 +8,7 @@ public class LolApiApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(LolApiApplication.class, args);
+        System.out.println("http://localhost:5005/lol-api/page/championEnglishAndChinese");
     }
 
 }

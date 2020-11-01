@@ -1,8 +1,9 @@
-package com.eg.lolapi.local;
+package com.eg.lolapi.local.run;
 
 import com.eg.lolapi.bean.champion.all.ChampionAll;
 import com.eg.lolapi.bean.champion.all.ChampionMapItem;
 import com.eg.lolapi.bean.champion.all.Spells;
+import com.eg.lolapi.local.LoadUtil;
 import com.eg.lolapi.local.constants.LanguageConstants;
 
 import java.util.List;
@@ -35,6 +36,5 @@ public class Run {
                 System.out.println();
             }
         }
-
     }
 }

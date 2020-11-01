@@ -5,17 +5,24 @@
     <title>championEnglishAndChinese</title>
 </head>
 <body>
-<table border="1" cellpadding="0" cellspacing="0" th:each="cbl:${championBeanList}">
-    <tr>
-        <td>
-            <span th:text="${cbl.spellName_en_US}"></span>
-            <span th:text="${cbl.spellName_zh_CN}"></span>
-        </td>
-    </tr>
-    <tr>
-        <td th:text="${cbl.description_en_US}"></td>
-        <td th:text="${cbl.description_zh_CN}"></td>
-    </tr>
+<table border="1" cellpadding="0" cellspacing="0">
+    <div th:each="cbl:${championBeanList}">
+        <tr>
+            <td colspan="2">
+                <b>
+                    <span th:text="${cbl.spellName_en_US}">cbl.spellName_en_US</span>
+                    <span th:text="${cbl.spellName_zh_CN}">cbl.spellName_zh_CN</span>
+                </b>
+            </td>
+        </tr>
+        <tr>
+            <td th:text="${cbl.description_en_US}">cbl.description_en_US</td>
+            <td th:text="${cbl.description_zh_CN}">cbl.description_zh_CN</td>
+        </tr>
+    </div>
+    <div>
+        <tr>-</tr>
+    </div>
 </table>
 </body>
 </html>
