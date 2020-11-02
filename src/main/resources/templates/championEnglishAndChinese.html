@@ -4,24 +4,43 @@
     <meta charset="UTF-8">
     <title>championEnglishAndChinese</title>
 </head>
-<body>
+<body bgcolor="#141416">
+<style>
+    span {
+        color: white;
+    }
+</style>
 <table border="1" cellpadding="0" cellspacing="0">
     <div th:each="cbl:${championBeanList}">
         <tr>
-            <td colspan="2">
+            <td width="3%">
                 <b>
-                    <span th:text="${cbl.spellName_en_US}">cbl.spellName_en_US</span>
-                    <span th:text="${cbl.spellName_zh_CN}">cbl.spellName_zh_CN</span>
+                    <span style="color: greenyellow;font-size:30px;
+                    display:table-cell; vertical-align: middle;text-align: center"
+                          th:utext="${cbl.qwer}">cbl.qwer</span>
                 </b>
             </td>
+            <td>
+                <img height="40px" th:src="@{'/dragontail-10.21.1/10.21.1/img/spell/'+${cbl.img}}"
+                     width="40px"/>
+            </td>
+            <td>
+                <b>
+                    <span th:utext="${cbl.spellName_en_US}">cbl.spellName_en_US</span>
+                </b>
+            </td>
+            <td width="6%">
+                <b>
+                    <span th:utext="${cbl.spellName_zh_CN}">cbl.spellName_zh_CN</span>
+                </b>
+            </td>
+            <td>
+                <span th:utext="${cbl.description_en_US}">cbl.description_en_US</span>
+            </td>
+            <td>
+                <span th:utext="${cbl.description_zh_CN}">cbl.description_zh_CN</span>
+            </td>
         </tr>
-        <tr>
-            <td th:text="${cbl.description_en_US}">cbl.description_en_US</td>
-            <td th:text="${cbl.description_zh_CN}">cbl.description_zh_CN</td>
-        </tr>
-    </div>
-    <div>
-        <tr>-</tr>
     </div>
 </table>
 </body>

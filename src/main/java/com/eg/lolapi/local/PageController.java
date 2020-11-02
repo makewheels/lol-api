@@ -38,8 +38,19 @@ public class PageController {
             for (int i = 0; i < spellsList_en_US.size(); i++) {
                 Spells spells_en_US = spellsList_en_US.get(i);
                 Spells spells_zh_CN = spellsList_zh_CN.get(i);
-
                 ChampionBean championBean = new ChampionBean();
+                String qwer;
+                if (i == 0) {
+                    qwer = "Q";
+                } else if (i == 1) {
+                    qwer = "W";
+                } else if (i == 2) {
+                    qwer = "E";
+                } else {
+                    qwer = "R";
+                }
+                championBean.setQwer(qwer);
+                championBean.setImg(spells_en_US.getImage().getFull());
                 championBean.setSpellName_en_US(spells_en_US.getName());
                 championBean.setSpellName_zh_CN(spells_zh_CN.getName());
                 championBean.setDescription_en_US(spells_en_US.getDescription());
